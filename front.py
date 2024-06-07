@@ -19,7 +19,7 @@ def main(page: ft.Page):
         progress_bar.visible = True
         page.update()
         copy_files(e.files)
-        progress_bar.visible = True
+        progress_bar.visible = False
         page.update()
         status_text.value = "Arquivos copiados com sucesso!"
         page.update()
@@ -29,14 +29,14 @@ def main(page: ft.Page):
         progress_bar.visible = True
         page.update()
         response = query_rag(query_text)
-        progress_bar.visible = True
+        progress_bar.visible = False
         page.update()
         answer_text.value = response
         page.update()
 
     # Interface de Upload de Arquivos
     file_picker = FilePicker(on_result=on_file_upload)
-    upload_button = ElevatedButton(text="Upload PDFs", on_click=lambda _: file_picker.pick_files(allowed_extensions=["pdf"]))
+    upload_button = ElevatedButton(text="Upload PDFs", on_click=lambda _: file_picker.pick_files(allowed_extensions=["pdf"], allow_multiple=True))
     status_text = Text(value="")
 
     # Interface do Chat com a IA
