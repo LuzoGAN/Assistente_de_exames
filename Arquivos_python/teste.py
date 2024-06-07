@@ -12,7 +12,7 @@ from langchain_community.vectorstores import Chroma
 from langchain_community.embeddings.ollama import OllamaEmbeddings
 import flet as ft
 
-CHROMA_PATH = "chroma"
+CHROMA_PATH = "../chroma"
 DATA_PATH = r"C:\Users\Notebook\Downloads\data"
 
 PROMPT_TEMPLATE = """
