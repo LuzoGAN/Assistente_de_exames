@@ -1,6 +1,6 @@
 import flet as ft
 import socket
-from ia import query_rag
+from front import query_rag
 
 
 def main(page: ft.Page):
